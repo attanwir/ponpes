@@ -18,7 +18,7 @@ const router = createBrowserRouter(
     { path: "/contact", element: <Contact /> },
     { path: "*", element: <Navigate to="/" /> },
   ],
-  { basename: "/attanwir" },
+  { basename: "/ponpes" },
 );
 
 function handleRedirect() {

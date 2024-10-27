@@ -51,13 +51,13 @@ function Home() {
               <div className="cta">
                 <Link
                   to="/"
-                  className="cta-register group mr-5 inline-flex items-center border-2 border-primary bg-primary px-4 py-4 text-base font-semibold text-light transition-colors hover:border-white hover:bg-white hover:text-primary md:text-lg"
+                  className="cta-register group mr-5 inline-flex items-center border-2 border-primary bg-primary px-2 py-3 text-sm font-semibold text-light transition-colors hover:border-white hover:bg-white hover:text-primary md:px-4 md:py-4 md:text-lg"
                 >
                   Daftar <RightArrow />
                 </Link>
                 <Link
                   to="/"
-                  className="cta-info group inline-flex items-center border-2 border-white bg-transparent px-4 py-4 text-base font-semibold text-light transition-colors hover:bg-white hover:text-dark md:text-lg"
+                  className="cta-info group inline-flex items-center border-2 border-white bg-transparent px-2 py-3 text-sm font-semibold text-light transition-colors hover:bg-white hover:text-dark md:px-4 md:py-4 md:text-lg"
                 >
                   Info Pendaftaran <RightArrow />
                 </Link>
@@ -75,7 +75,8 @@ function Home() {
                 Tentang Pondok
               </h2>
               <h1 className="big-title header-underline text-2xl font-semibold uppercase !leading-snug tracking-tight text-dark dark:text-light md:text-3xl xl:text-4xl">
-                Pondok Pesantren At-Tanwir
+                Pondok Pesantren <br className="md:hidden" />
+                At-Tanwir
               </h1>
             </div>
             <div className="about-content mx-auto flex w-11/12 flex-col gap-x-20 gap-y-10 md:flex-row lg:w-4/5">
