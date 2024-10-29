@@ -1,6 +1,6 @@
+import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import ThemeBtn from "../buttons/ThemeBtn";
-import { useEffect, useState } from "react";
 import MenuBtn from "../buttons/MenuBtn";
 import logo from "../../assets/logo.png";
 import { navigation } from "../../assets/data";
@@ -8,7 +8,6 @@ import classFilter from "../../utils/classFilter";
 
 function Navbar() {
   const location = useLocation();
-  const links = ["Beranda", "Tentang", "Galeri", "Kontak"];
   const [showMenu, setShowMenu] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -29,7 +28,7 @@ function Navbar() {
     } else if (!showMenu && !window.scrollY > 50) {
       window.removeEventListener("click", handleClickOutside);
       setScrolled(false);
-    } else if (window.scrollY < 50) {
+    } else if (window.scrollY < 50 && location.pathname === "/") {
       setScrolled(false);
     }
 
@@ -70,12 +69,14 @@ function Navbar() {
             At-Tanwir
           </Link>
         </div>
+
         <div className="hidden flex-row items-center justify-center space-x-10 md:flex">
           {navigation.map((nav) => {
             const isActive = location.pathname === nav.href;
             return (
               <Link
                 key={nav.name}
+                title={nav.name}
                 to={nav.href}
                 className={classFilter(
                   isActive
@@ -96,15 +97,17 @@ function Navbar() {
               showMenu ? "" : "scale-y-0"
             }`}
           >
-            {links.map((link, i) => {
-              const notHome = link !== "Beranda";
+            {/* Mobile Navigation */}
+
+            {navigation.map((nav) => {
               return (
                 <Link
-                  key={i}
-                  to={notHome ? `/${link.toLowerCase()}` : "/"}
+                  key={nav.name}
+                  title={nav.name}
+                  to={nav.href}
                   className="block border-t-2 border-quaternary bg-primary px-5 py-5 font-semibold hover:bg-tertiary hover:text-neutral-400 dark:border-[#293D33] dark:bg-tertiary dark:hover:bg-quaternary dark:hover:text-stone-700"
                 >
-                  {link}
+                  {nav.name}
                 </Link>
               );
             })}

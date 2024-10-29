@@ -96,21 +96,21 @@ export const aboutSectAnimation = () => {
 
   const tl = gsap.timeline();
 
-  tl.from(".about .small-title", { y: -50, opacity: 0, duration: 1.5 })
-    .from(".about .big-title", { y: -50, opacity: 0, duration: 1.5 }, "-=1")
+  tl.from(".about .small-title", { y: -50, opacity: 0, duration: 1 })
+    .from(".about .big-title", { y: -50, opacity: 0, duration: 1 }, "-=0.5")
     .from(
       ".about-content .image",
-      { x: -50, rotate: 20, opacity: 0, duration: 1.5 },
-      "-=1",
+      { x: -50, rotate: 20, opacity: 0, duration: 1 },
+      "-=0.5",
     )
     .from(
       ".about-content p",
-      { x: 50, rotate: -20, opacity: 0, duration: 1.5 },
-      "-=1",
+      { x: 50, rotate: -20, opacity: 0, duration: 1 },
+      "-=0.5",
     )
     .from(
       ".about-content .about-link",
-      { x: 50, rotate: -10, opacity: 0, duration: 1.5 },
+      { x: 50, rotate: -10, opacity: 0, duration: 1 },
       "-=0.2",
     );
 
@@ -133,16 +133,18 @@ export const gallerySectAnimation = () => {
     ".gallery .gallery-content .image-container",
   );
 
-  tl.from(".gallery .small-title", { y: -50, opacity: 0, duration: 1.5 })
-    .from(".gallery .big-title", { y: -50, opacity: 0, duration: 1.5 }, "-=1")
+  tl.from(".gallery .small-title", { y: -50, opacity: 0, duration: 1 })
+    .from(".gallery .big-title", { y: -50, opacity: 0, duration: 1 }, "-=1")
     .from(
       images,
       {
         opacity: 0,
-        duration: 2,
+        x: -500,
+        duration: 0.5,
         stagger: {
-          each: 0.1,
-          from: "random",
+          each: 0.7,
+          from: "0",
+          grid: "auto",
           ease: "power1.inOut",
         },
       },

@@ -15,6 +15,21 @@ export default {
         tertiary: "#344e41",
         quaternary: "#37815F",
       },
+      keyframes: {
+        rainbowText: {
+          "0%": { color: "#ff0000" },
+          "14%": { color: "#ff7f00" },
+          "28%": { color: "#ffff00" },
+          "42%": { color: "#00ff00" },
+          "56%": { color: "#0000ff" },
+          "70%": { color: "#4b0082" },
+          "84%": { color: "#9400d3" },
+          "100%": { color: "#ff0000" },
+        },
+      },
+      animation: {
+        rainbowText: "rainbowText 5s ease-in-out infinite",
+      },
     },
   },
   plugins: [],

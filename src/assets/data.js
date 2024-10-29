@@ -6,7 +6,7 @@ export const navigation = [
 ];
 
 export const sosmed = [
-  { name: "Instagram", href: "https://instagram.com/media._attanwir" },
+  { name: "Instagram", href: "https://instagram.com/ponpesattanwir" },
   { name: "Facebook", href: "https://facebook.com/ponpes.tanwir" },
   { name: "Youtube", href: "https://youtube.com/@attanwirmedia2739" },
 ];

@@ -80,3 +80,4 @@ desktop.ini
 
 # Vite's development server
 dist
+.vercel
